@@ -1,0 +1,33 @@
+/* E-mail css reset: http://templates.mailchimp.com/development/css/reset-styles */
+
+#mail-container {
+  margin  : 0;
+  padding : 0;
+}
+
+#mail-container img {
+  border          : 0 none;
+  height          : auto;
+  line-height     : 100%;
+  outline         : none;
+  text-decoration : none;
+}
+
+#mail-container a img{
+  border : 0 none;
+}
+
+#mail-container .image-fix {
+  display : block;
+}
+
+#mail-container table, td {
+  border-collapse : collapse;
+}
+
+#bodyTable {
+  height  : 100% !important;
+  margin  : 0;
+  padding : 0;
+  width   : 100% !important;
+}
