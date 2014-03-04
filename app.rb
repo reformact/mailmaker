@@ -18,7 +18,7 @@ get '/email' do
   document.transform
 end
 
-def base64_images(whitelist = %w{ .png .jpg .gif })
+def base64_images(whitelist = %w(.png .jpg .gif))
   files = {}
   directory = "#{ settings.root }/base64"
 
@@ -26,7 +26,7 @@ def base64_images(whitelist = %w{ .png .jpg .gif })
     Dir.foreach(directory) do |file|
       if whitelist.include? File.extname(file)
         key = File.basename(file, File.extname(file)).to_sym
-        files[key] = Base64.encode64(File.read([directory, file].join("/")))
+        files[key] = Base64.encode64(File.read("#{ directory }/#{ file }"))
       end
     end
   end
