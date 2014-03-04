@@ -22,7 +22,7 @@ def base64_images(whitelist = %w(.png .jpg .gif))
   files = {}
   directory = "#{ settings.root }/base64"
 
-  if File.exists?("base64")
+  if File.exists?(directory)
     Dir.foreach(directory) do |file|
       if whitelist.include? File.extname(file)
         key = File.basename(file, File.extname(file)).to_sym
