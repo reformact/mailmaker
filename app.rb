@@ -1,4 +1,4 @@
-%w{ sinatra roadie base64 }.each do |lib|
+%w(sinatra roadie base64).each do |lib|
   require lib
 end
 
